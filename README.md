@@ -1,7 +1,18 @@
-# PerAct
+# Center for Human Machine Systems - Robot-Assisted Feeding
 
-Anonymous Submission. 
+This is the repository that contains source code for the [CHMS-raf website](https://chms-raf.github.io).
 
+If you find Nerfies useful for your work please cite:
+```
+@inproceedings{schultz2022proof,
+  title={Proof-of-Concept: A Hands-Free Interface for Robot-Assisted Self-Feeding},
+  author={Schultz, John R and Slifkin, Andrew B and Yu, Hongkai and Schearer, Eric M},
+  booktitle={2022 International Conference on Rehabilitation Robotics (ICORR)},
+  pages={1--6},
+  year={2022},
+  organization={IEEE}
+}
+```
 
 # Website License
 Templated borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>  
