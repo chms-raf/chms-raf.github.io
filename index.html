@@ -185,7 +185,8 @@
         </div>
         <br>
         <h2 class="subtitle has-text-centered">
-        We developed a <b>robotic assistance platform</b> to enable people with spinal cord injuries <br>to feed themselves using their eye movements.
+        We developed a <b>robotic assistance platform</b> to enable people with spinal cord injuries <br>
+        to feed themselves using their <b>eye movements</b>.
         </h2>
       </div>
     </div>
@@ -204,13 +205,13 @@
         </div>
         <div class="item item-fullbody">
           <video poster="" id="fullbody" autoplay muted loop height="100%">
-            <source src="media/intro/2-object-detection.mp4"
+            <source src="media/intro/2-simulation.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-shiba">
           <video poster="" id="shiba" autoplay muted loop height="100%">
-            <source src="media/intro/3-angle-detection.mp4"
+            <source src="media/intro/3-object-detection.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -245,7 +246,10 @@
 </section>
 <h2 class="subtitle has-text-centered">
 </br>
-  We also train <b>one multi-task Transformer from scratch</b> on 7 real-world tasks with just <b>53 demos</b> in total.
+  The system consits primarily of a <b>Kinova Gen3 robot</b> attached to a powered wheelchair.<br>
+  Capabilities include detecting, localizing, acquiring, and delivering food items <br>
+  to a person with a <b>spinal cord injury</b>. The person communicates their intention to the system<br>
+  using their <b>eye movements</b> to interact with a custom <b>graphical user interface</b>.
 </h2>
 
 
@@ -257,24 +261,26 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Transformers have revolutionized vision and natural language processing 
-            with their ability to scale with large datasets. But in robotic manipulation, 
-            data is both limited and expensive. Can we still benefit from Transformers with the right problem formulation? 
+            Eating and drinking is an essential part of everyday life. And yet, there are many people in the world today
+            who rely on others to feed them. In this work, we present a prototype robot-assisted self-feeding system for individuals
+            with movement disorders. The system is capable of perceiving, localizing, grasping, and delivering non-compliant food items
+            to an individual. 
           </p>
           <p>
-            We investigate this question with <span class="dperact">PerAct</span>, a
-            language-conditioned behavior-cloning agent for multi-task 6-DoF manipulation.
-            <span class="dperact">PerAct</span> encodes language goals and RGB-D voxel observations with a 
-            <a target=”_blank” href="https://www.deepmind.com/blog/building-architectures-that-can-handle-the-worlds-data">Perceiver Transformer</a>, and outputs discretized 
-            actions by “detecting the next best voxel action”. Unlike frameworks that operate on 2D images, the voxelized observation
-            and action space provides a strong structural prior for efficiently learning 6-DoF
-            policies. 
+            We trained an object recognition network to detect specific food items, and we compute the grasp
+            pose for each item. Human input is obtained through an interface consisting of an eye-tracker and a display screen. The
+            human selects options on the monitor with their eye and head movements and triggers responses with mouth movements. 
           </p>
           <p>
-            With this formulation, we train <b>a single multi-task Transformer</b> for 18
-            <a target="_blank" href="https://sites.google.com/view/rlbench">RLBench</a> (with 249 variations) and 7 real-world tasks (with 18 variations) from just a few demonstrations per task. Our
-            results show that <span class="dperact">PerAct</span> significantly outperforms unstructured image-to-action
-            agents (by 34x) and 3D ConvNet baselines (by 2.8x) for a wide range of tabletop tasks.
+            We performed a pilot study with five able-bodied participants and five participants with a spinal cord injuries (SCI) to evaluate
+            the performance of our prototype system. Participants selected food items with their eye movements, which were then delivered
+            by the robot.
+          </p>
+          <p>
+            We observed an average overall feeding success rate of 91.6% and an average overall task time of 34.2 ± 4.0
+            seconds per food item. The SCI participants gave scores of 83.1 and 12.1 on the System Usability Scale and NASA Task
+            Load Index, respectively. We also conducted a custom, post-study interview to gather participant feedback to drive future
+            design decisions.
           </p>
         </div>
       </div>
