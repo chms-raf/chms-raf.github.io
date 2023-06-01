@@ -34,7 +34,7 @@
                   "-" +
                   inst +
                   ".mp4"
-      video.playbackRate = 1.75;
+      video.playbackRate = 1.0;
       video.play();
     }
 
@@ -47,7 +47,7 @@
       video.src = "media/results/qpred/" + 
                   task + 
                   ".mp4"
-      video.playbackRate = 1.75;
+      video.playbackRate = 1.0;
       video.play();
     }
 
@@ -412,13 +412,12 @@
           <div class="column has-text-centered">
             <h3 class="title is-5">Q-Prediction Examples</h3>
 
-            Visualize predictions for   
+            View Demo for   
             <div class="select is-small is-rounded">     
               <select id="single-menu-qpred" onchange="updateQpredVideo()">
-              <option value="tomato" selected="selected">"put the tomatoes in the top bin"</option>
-              <option value="stick">"hit the green ball with the stick"</option>
-              <option value="handsan">"press the hand san"</option>
-              <option value="tape">"put the tape in the top drawer"</option>
+              <option value="RAFv2-Grasp">"RAFv2 - Eat Pretzel"</option>
+              <option value="RAFv2-Sip">"RAFv2 - Sip Drink"</option>
+              <option value="RAFv1-Grasp">"RAFv1 - Eat Pretzel"</option>
               </select>
             </div>
           </div>
@@ -433,7 +432,7 @@
        autoplay
        loop
        width="100%">
-  <source src="media/results/qpred/tomato.mp4"
+  <source src="media/results/qpred/RAFv2-Grasp.mp4"
           type="video/mp4">
 </video>
 
