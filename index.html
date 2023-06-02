@@ -268,7 +268,7 @@
           </p>
           <p>
             We observed an average overall feeding success rate of 91.6% and an average overall task time of 34.2 ± 4.0
-            seconds per food item. The SCI participants gave scores of 83.1 and 12.1 on the System Usability Scale and NASA Task
+            seconds per food item. The SCI participants gave scores of 83.1 and 13.6 on the System Usability Scale and NASA Task
             Load Index, respectively. We also conducted a custom, post-study interview to gather participant feedback to drive future
             design decisions.
           </p>
@@ -316,10 +316,12 @@
           to perform tasks of everyday living, with a primary emphasis on feeding.
           <br>
           <br>
-          We began by developing a prototype robot-assisted feeding system. The system consisted primarily of a Baxter research robot 
-          positioned across the table from the user. The person sits in their powered wheelchair, equipped with a monitor and a commercial 
-          eye tracker. A depth camera is mounted to the wrist of the robot to handle perception, and the user communicates their intention 
-          to the system using their eye movements. This initial protoype was our 'Version 1' robot-assisted feeding device, or '<span class="dperact">RAFv1</span>'.   
+          We began by developing a prototype robot-assisted feeding system. The system consisted primarily of a <b>Baxter Research Robot</b> 
+          from <a target="_blank" href="https://www.rethinkrobotics.com">Rethink Robotics</a> positioned across the table from the user. 
+          The person sits in their powered wheelchair, equipped with a monitor and a <a target="_blank" href="https://gaming.tobii.com/product/eye-tracker-5/">Tobii Eye Tracker 5</a>. 
+          An <a target="_blank" href="https://www.intelrealsense.com/lidar-camera-l515/">Intel L515 depth camera</a> is mounted to the wrist 
+          of the robot to handle perception, and the user communicates their intention to the system using their eye movements. 
+          This initial protoype was our 'Version 1' robot-assisted feeding device, or '<span class="dperact">RAFv1</span>'.   
         </p>
         </br>
         </br>
@@ -333,8 +335,9 @@
         <!-- <br> -->
         </div>
         <p>
-          To detect food items on a plate, we trained a mask R-CNN object detection network to recognize symmetric, non-compliant food items 
-          such as carrots, pretzels, and celery. We used AprilTag fiducial markers to register the coordinate frame for the scene and computed 
+          To detect food items on a plate, we trained a <a targer="_blank" href="https://arxiv.org/pdf/1703.06870.pdf">mask R-CNN</a> object detection network to recognize symmetric, non-compliant food items 
+          such as carrots, pretzels, and celery. We used the <a target="_blank" href="https://github.com/facebookresearch/detectron2">Detectron2</a> 
+          framework for object detection implementation. We used  <a target="_blank" href="https://github.com/AprilRobotics/apriltag">AprilTag</a> fiducial markers to register the coordinate frame for the scene and computed 
           the grasp pose for food item acquisition.
         </p>
         </br>
@@ -358,8 +361,9 @@
              the user and the system. The GUI primarily displays the output of the depth camera attached to the robot 
              overlaid with detections from the mask R-CNN inference. The person uses their eyes to control a dwell-time cursor 
              to make selections on the screen. When the cursor enters the bounding box of a selectable food item, it will highlight 
-             to indicate its interactivity. If the cursor remains in the box for 1.5s, the item is selected. The primary benefit 
-             of this setup is that users are in control over the most important decisions of the feeding task: what to eat and when to eat it.
+             to indicate its interactivity. If the cursor remains in the box for 1.5 s, the item is selected. The primary benefit 
+             of this setup is that users are in control over the most important decisions of the feeding task: what to eat and when to eat it. 
+             We used <a target="_blank" href="https://talonvoice.com">Talon Voice</a> as the communication layer between the user and the GUI.
           </p>
         <br/>
         <br/>
@@ -395,14 +399,27 @@
             <br>
             <br>
             To evaluate system performance, we measured both success rates and task times for each of the 
-            study phases. After data collection, we had participants complete the NASA Task Load Index 
-            (TLX) and the System Usability Scale (SUS). To better understand the needs of the disability 
+            study phases. After data collection, we had participants complete the <a target="_blank" href="https://humansystems.arc.nasa.gov/groups/TLX/">NASA Task Load Index 
+            (TLX)</a> and the <a target="_blank" href="https://www.usability.gov/how-to-and-tools/methods/system-usability-scale.html">System Usability Scale (SUS)</a>. To better understand the needs of the disability 
             community, we gathered qualitative feedback from participants in the form of a custom, 
             semi-structured, post-study interview.
+            <br>
+            <br>
+            We observed an average overall feeding success rate of 91.6% and an average overall task time of 34.2 ± 4.0
+            seconds per food item. The SCI participants gave scores of 83.1 and 13.6 on the SUS and TLX
+            , respectively.
         </p>
         <br/>
         <br/>
+
+        <img src="media/figures/results1.png" class="interpolation-image" 
+         alt="Interpolate start reference image." />
+
+        <img src="media/figures/results2.png" class="interpolation-image"
+         alt="Interpolate start reference image." />
         
+        <br/>
+        <br/>
 
         <!--/ Re-rendering. -->
 
