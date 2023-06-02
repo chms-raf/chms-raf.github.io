@@ -315,6 +315,7 @@
           The goal of this work was to develop a robotic platform for helping people with spinal cord injuries
           to perform tasks of everyday living, with a primary emphasis on feeding.
           <br>
+          <br>
           We began by developing a prototype robot-assisted feeding system. The system consisted primarily of a Baxter research robot 
           positioned across the table from the user. The person sits in their powered wheelchair, equipped with a monitor and a commercial 
           eye tracker. A depth camera is mounted to the wrist of the robot to handle perception, and the user communicates their intention 
@@ -350,7 +351,7 @@
 
         <h3 class="title is-4">Custom Graphical User Interface</h3>
           <p class="justify">
-            <img src="media/figures/gui-cursor.gif" class="interpolation-image" width="25%" align="right"
+            <img src="media/figures/gui-cursor2.gif" class="interpolation-image" width="25%" align="right"
                  style="margin:0% 4% "
                  alt="Interpolate start reference image." />
              We developed a custom graphical user interface (GUI) which facilitates bi-directional communication between 
@@ -362,6 +363,46 @@
           </p>
         <br/>
         <br/>
+
+        <h3 class="title is-4">Mouth Detection</h3>
+          <p class="justify">
+            <img src="media/figures/mouth-detection.gif" class="interpolation-image" width="25%" align="left"
+                 style="margin:0% 4% 0% 0%"
+                 alt="Interpolate start reference image." />
+                 To detect the user's facial keypoints, we used the <a target="_blank" href="https://github.com/1adrianb/face-alignment">face-alignment</a> python package. 
+                 This package detects 60 facial landmarks, 12 of which belong to the mouth. We fit an ellipse 
+                 to those 12 mouth landmarks by minimizing a least-squares cost function. By comparing the ratio 
+                 of the principal axes of the ellipse to a threshold, we can get a good indication of whether the 
+                 mouth is open or closed. By opening their mouth, the user indicates when they are ready to eat. 
+                 This gives the person additional control over the pacing of the feeding task.
+          </p>
+        <br/>
+        <br/>
+        <br/>
+
+        <h3 class="title is-4"><span class="dperact">RAFv1</span> - Pilot Study</h3>
+        <div class="content has-text-justified">
+        <!-- <br> -->
+        </div>
+        <p>
+            In this work, we conducted a pilot study in which we presented the system to individuals 
+            with spinal cord injuries and other mobility impairments. People were able to try out the 
+            system, practice feeding themselves, and discover critical failure modes. The goal was to 
+            develop a baseline for system performance as well as to capture human experience when using 
+            the device. Five able-bodied individuals (2 male, 3 female; 25 ± 4.3 years old) and five 
+            people with spinal cord injury or other movement disorders (3 male, 2 female, 48 ± 13.3 
+            years old) participated in the study.
+            <br>
+            <br>
+            To evaluate system performance, we measured both success rates and task times for each of the 
+            study phases. After data collection, we had participants complete the NASA Task Load Index 
+            (TLX) and the System Usability Scale (SUS). To better understand the needs of the disability 
+            community, we gathered qualitative feedback from participants in the form of a custom, 
+            semi-structured, post-study interview.
+        </p>
+        <br/>
+        <br/>
+        
 
         <!--/ Re-rendering. -->
 
@@ -376,7 +417,6 @@
             System: 
             <div class="select is-small">
               <select id="single-menu-demos" onchange="updateSingleVideo()">
-              <option value="RAFv0">RAFv0</option>
               <option value="RAFv1">RAFv1</option>
               <option value="RAFv2" selected="selected">RAFv2</option>
               </select>
@@ -396,7 +436,7 @@
                    muted
                    autoplay
                    loop
-                   width="100%">
+                   width="99%">
               <source src="media/results/qpred/RAFv2-Grasp.mp4"
                       type="video/mp4">
             </video>
@@ -418,24 +458,25 @@
               <option value="RAFv2-Sip">"RAFv2 - Sip Drink"</option>
               <option value="RAFv2-Visual-Servoing">"RAFv2 - Visual Servoing"</option>
               <option value="RAFv1-Grasp">"RAFv1 - Eat Pretzel"</option>
-              <option value="RAFv0-Sip">"RAFv0 - Sip"</option>
+              <option value="RAFv1-Sip">"RAFv1 - Sip Drink"</option>
               </select>
             </div>
+            <br/>
+            <br/>
+            <video id="q-pred-video"
+                muted
+                autoplay
+                loop
+                width="99%">
+            <source src="media/results/qpred/RAFv2-Grasp.mp4"
+                    type="video/mp4">
+            </video>
           </div>
 
       </div>
     </div>
   </div>
 </section>
-
-<video id="q-pred-video"
-       muted
-       autoplay
-       loop
-       width="100%">
-  <source src="media/results/qpred/RAFv2-Grasp.mp4"
-          type="video/mp4">
-</video>
 
 <br>
 <br>
