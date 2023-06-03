@@ -1,8 +1,8 @@
-# Center for Human Machine Systems - Robot-Assisted Feeding
+# A Robotic Assistance Platform for Self-Feeding
 
 This is the repository that contains source code for the [CHMS-raf website](https://chms-raf.github.io).
 
-If you find Nerfies useful for your work please cite:
+If you find this research useful for your work please cite:
 ```
 @inproceedings{schultz2022proof,
   title={Proof-of-Concept: A Hands-Free Interface for Robot-Assisted Self-Feeding},
