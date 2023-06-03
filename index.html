@@ -19,29 +19,16 @@
 
   <script>
     function updateSingleVideo() {
-      var demo = document.getElementById("single-menu-demos").value;
+      var system = document.getElementById("single-menu-system").value;
       var task = document.getElementById("single-menu-tasks").value;
 
     //   console.log("single", demo, task)
 
       var video = document.getElementById("multi-task-result-video");
-      video.src = "media/results/qpred/" + 
-                  demo +
+      video.src = "media/demos/" + 
+                  system +
                   "-" +
                   task +
-                  ".mp4"
-      video.playbackRate = 1.0;
-      video.play();
-    }
-
-    function updateQpredVideo() {
-      var task = document.getElementById("single-menu-qpred").value;
-
-    //   console.log("qpred", task)
-
-      var video = document.getElementById("q-pred-video");
-      video.src = "media/results/qpred/" + 
-                  task + 
                   ".mp4"
       video.playbackRate = 1.0;
       video.play();
@@ -278,11 +265,42 @@
     <br>
     <br>
     <!--/ Abstract. -->
+    <!-- Paper video. -->
+  <div class="columns">
+    <div class="column has-text-centered">
+      <h2 class="title is-3">Demonstrations</h3>
 
+      System: 
+      <div class="select is-small">
+        <select id="single-menu-system" onchange="updateSingleVideo()">
+        <option value="RAFv1">RAFv1</option>
+        <option value="RAFv2" selected="selected">RAFv2</option>
+        </select>
+      </div>
+      , Task: 
+      <div class="select is-small">     
+        <select id="single-menu-tasks" onchange="updateSingleVideo()">
+        <option value="Grasp" selected="selected">Grasp</option>
+        <option value="Sip">Sip</option>
+        </select>
+      </div>
+      <br/>
+      <br/>
+
+      <video id="multi-task-result-video"
+             muted
+             autoplay
+             loop
+             width="99%">
+        <source src="media/demos/RAFv2-Grasp.mp4"
+                type="video/mp4">
+      </video>
+    </div>
+  </div>
   </div>
 
   <!-- Paper video. -->
-  <div class="columns is-centered has-text-centered">
+  <!-- <div class="columns is-centered has-text-centered">
     <div class="column is-two-thirds">
       <h2 class="title is-3">Video</h2>
       <div class="publication-video">
@@ -290,7 +308,7 @@
                 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
     </div>
-  </div>
+  </div> -->
 
 </section>
 
@@ -524,14 +542,16 @@
         </p>
 
         <br/>
+        <center>
         <video id="rafv2-visual-servoing"
              muted
              autoplay
              loop
-             width="100%">
-        <source src="media/figures/visual-servoing.mp4" 
+             width="80%">
+        <source src="media/figures/visual-servoing.mp4"
                 type="video/mp4">
         </video>
+        </center>
         <br>
         <br>
 
@@ -549,47 +569,8 @@
             spinal cord injury and other mobility impairments.
         </p>
         <br>
-        <br>
 
         <!--/ Re-rendering. -->
-
-        <!-- <h2 class="title is-3">Results</h2>
-
-        <h3 class="title is-4">Demonstrations</h3> -->
-
-        <div class="columns">
-          <div class="column has-text-centered">
-            <h2 class="title is-3">Demonstrations</h3>
-
-            System: 
-            <div class="select is-small">
-              <select id="single-menu-demos" onchange="updateSingleVideo()">
-              <option value="RAFv1">RAFv1</option>
-              <option value="RAFv2" selected="selected">RAFv2</option>
-              </select>
-            </div>
-            , Task: 
-            <div class="select is-small">     
-              <select id="single-menu-tasks" onchange="updateSingleVideo()">
-              <option value="Grasp" selected="selected">Grasp</option>
-              <option value="Sip">Sip</option>
-              </select>
-            </div>
-            <br/>
-            <br/>
-
-            <video id="multi-task-result-video"
-                   muted
-                   autoplay
-                   loop
-                   width="99%">
-              <source src="media/results/qpred/RAFv2-Grasp.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div>
-        </br>
-        </br>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-widescreen content">
