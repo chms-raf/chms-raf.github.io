@@ -507,6 +507,50 @@
         <br>
         <br>
 
+        <h3 class="title is-4"><span class="dperact">RAFv2</span> - Visual Servoing</h3>
+        <div class="content has-text-justified">
+        <!-- <br> -->
+        </div>
+        <p>
+            In the initial prototype pilot study, we defined set positions for the food item handoff 
+            point. During the post-study interviews, participants mentioned they thought it would 
+            be a good idea if the robot could track the person's mouth position to adjust the 
+            handoff point as needed. To implement this feature, we used visual servoing to continually 
+            adjust the pose of the robot based on the position of the user's mouth. The desired camera 
+            pose was defined as a simple offset (~20 cm) in the z-direction from the mouth pose towards 
+            the camera. This results in the robot hovering in front of the user's face, tracking the mouth 
+            as the user moves. To implement visual servoing, we used the open-source <a target="_blank" 
+            href="https://visp.inria.fr">Visual Servoing Platform Library (ViSP)</a>.
+        </p>
+
+        <br/>
+        <video id="rafv2-visual-servoing"
+             muted
+             autoplay
+             loop
+             width="100%">
+        <source src="media/figures/visual-servoing.mp4" 
+                type="video/mp4">
+        </video>
+        <br>
+        <br>
+
+        <h3 class="title is-4">Conclusion</h3>
+        <div class="content has-text-justified">
+        <!-- <br> -->
+        </div>
+        <p>
+            In this work, we present the design and development of our prototype robot-assisted feeding 
+            system and the results of our initial pilot study with members of the SCI community. We also 
+            present our second device iteration incorporating upgrades targetted toward a general purpose 
+            robotic assistance platform for performing activities of daily living. While there is 
+            significant work to be done to transition this technology toward a usable product, this work 
+            represents a significant step toward in-home robotic assistance platforms for people with 
+            spinal cord injury and other mobility impairments.
+        </p>
+        <br>
+        <br>
+
         <!--/ Re-rendering. -->
 
         <!-- <h2 class="title is-3">Results</h2>
@@ -529,7 +573,6 @@
               <select id="single-menu-tasks" onchange="updateSingleVideo()">
               <option value="Grasp" selected="selected">Grasp</option>
               <option value="Sip">Sip</option>
-              <option value="Visual-Servoing">Visual Servoing</option>
               </select>
             </div>
             <br/>
@@ -551,6 +594,9 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-widescreen content">
     <h2 class="title">BibTeX</h2>
+    <p>
+        If you found this work helpful, please cite our conference paper!
+    </p>
     <pre><code>@inproceedings{schultz2022proof,
         title={Proof-of-Concept: A Hands-Free Interface for Robot-Assisted Self-Feeding},
         author={Schultz, John R and Slifkin, Andrew B and Yu, Hongkai and Schearer, Eric M},
