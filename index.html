@@ -478,6 +478,35 @@
         <br>
         <br>
 
+        <h3 class="title is-4"><span class="dperact">RAFv2</span> - Perception Pipeline</h3>
+        <div class="content has-text-justified">
+        <!-- <br> -->
+        </div>
+        <p>
+            In the previous prototype, the robot had to view the food item from overhead to compute 
+            the grasp pose, while simultaneously viewing the AR tag. This resulted in both a restrictive 
+            motion planning process as well as a clunky system operation. The addition of the second 
+            depth camera provided a constant RGB-D data stream to increase the system's perception 
+            potential. While the robot's arm camera is monitoring food items and has a low field of view, 
+            the scene camera is monitoring collision objects and other scene-related items. The point 
+            clouds of each camera stream can be stitched together to build an overall scene environment. 
+            Additionally, we implemented the <a target="_blank" href="https://moveit.ros.org">
+            MoveIt Motion Planning Library</a> to plan collision-free motions with the robot. The video 
+            below shows an example of a collision-free motion plan using MoveIt's perception pipeline.
+        </p>
+
+        <br/>
+        <video id="rafv2-motion-planning"
+             muted
+             autoplay
+             loop
+             width="100%">
+        <source src="media/figures/motion-plan.mp4" 
+                type="video/mp4">
+        </video>
+        <br>
+        <br>
+
         <!--/ Re-rendering. -->
 
         <!-- <h2 class="title is-3">Results</h2>
