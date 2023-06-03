@@ -441,8 +441,40 @@
         </p>
 
         <br>
-        <img src="media/intro/rafv2-system.png" class="interpolation-image" style="margin: 0% 0% 0% 12%"
-        width="80%" alt="Interpolate start reference image." />
+        <video id="rafv2-overview"
+             muted
+             autoplay
+             loop
+             width="100%">
+        <source src="media/figures/rafv2-overview.mp4" 
+                type="video/mp4">
+        </video>
+        <br>
+        <br>
+
+        <h3 class="title is-4"><span class="dperact">RAFv2</span> - Object Detection Upgrades</h3>
+        <div class="content has-text-justified">
+        <!-- <br> -->
+        </div>
+        <p>
+            To interact with more food items, we expanded our object detection dataset to include 
+            additional items. We continued to use the Mask R-CNN model in the previous device iteration, 
+            but fine-tuned the model to include images of scoopable and skewerable food items in addition 
+            to graspable items. Graspable items included pretzels, carrots, and celery. Skewerable items 
+            included strawberry, watermelon, and banana. Scoopable items included yogurt, cottage cheese, 
+            and beans. In addition to food items, we also included other dining objects such as plates, 
+            cups, bowls, forks, spoons, and knives, with a total of 16 classes in our new model.
+        </p>
+
+        <br/>
+        <video id="rafv2-object-detection"
+             muted
+             autoplay
+             loop
+             width="100%">
+        <source src="media/figures/upgraded-object-detection.mp4" 
+                type="video/mp4">
+        </video>
         <br>
         <br>
 
