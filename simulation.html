@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="Simulation"
+        content="Unity Simulation of the CHMS-RAF Project">
+  <meta name="keywords" content="Robot-Assisted Feeding, Unity, Simulation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="sim-data/TemplateData/favicon.ico">
+  <link rel="stylesheet" href="sim-data/TemplateData/style.css">
+  <title>CHMS-RAF Simulation</title>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FV4ZJ9PVSV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-FV4ZJ9PVSV');
+  </script>
+
+  <script>
+    function updateSingleVideo() {
+      var system = document.getElementById("single-menu-system").value;
+      var task = document.getElementById("single-menu-tasks").value;
+
+    //   console.log("single", demo, task)
+
+      var video = document.getElementById("multi-task-result-video");
+      video.src = "media/demos/" + 
+                  system +
+                  "-" +
+                  task +
+                  ".mp4"
+      video.playbackRate = 1.0;
+      video.play();
+    }
+
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body onload="updateSingleVideo(); updateQpredVideo();">
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" target="_blank" href="https://engineering.csuohio.edu/research/center-for-human-machine-systems">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" target="_blank" href="https://github.com/chms-raf/eye-hand-coordination">
+            Eye-Hand Coordination
+          </a>
+          <a class="navbar-item" target="_blank" href="https://github.com/chms-raf/preference-adaptation">
+            Preference Adaptation
+          </a>
+          <a class="navbar-item" target="_blank" href="simulation.html">
+            RAF Simulation
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">A Robotic-Assissted Feeding <br>Platform Simulated</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a target="_blank" href="https://linkedin.com/in/k-wince">Kaden Wince</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a target="_blank" href="https://facultyprofile.csuohio.edu/csufacultyprofile/detail.cfm?FacultyID=e_schearer">Eric M. Schearer</a><sup>2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Ohio Northern University (Electrical & Computer Engineering and Computer Science),</span>
+            <span class="author-block"><sup>2</sup>Cleveland State University (Mechanical Engineering)</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. 
+              <span class="link-block">
+                <a target="_blank" href="paper/chms-raf-icorr2022.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+
+            <!-- Video Link. -->
+            <!--<span class="link-block">
+              <a target="_blank" href="https://youtu.be/AmBzfEcXVCc"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-youtube"></i>
+                </span>
+                <span>Video</span>
+              </a>
+            </span>-->
+
+            <!-- Code Link. -->
+            <span class="link-block">
+              <a target="_blank" href="https://github.com/chms-raf/raf-v2-simulation"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+                </a>
+            </span>
+
+            </div>
+          </div>
+<!--           <br>
+          <br> -->
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-fullhd">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered  is-centered">
+            <img src="sim-media/intro/rafv2-sim.png" width="90%" alt="Robot-Assisted Feeding system V2 versus Simulation." />
+          </br>
+        </div>
+        <br>
+        <h2 class="subtitle has-text-centered">
+        We developed a <b>simulation of a robotic assistance platform</b> using Unity to enable people with spinal cord injuries <br>
+        to experience and give feedback on the RAF project <b>at home</b>.
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay muted loop height="100%">
+            <source src="sim-media/intro/CartesianControl.m4v"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay muted loop height="100%">
+            <source src="sim-media/intro/ObjectDetection.m4v"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay muted loop height="100%">
+            <source src="sim-media/intro/JointControl.m4v"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay muted loop height="100%">
+            <source src="sim-media/intro/SipMap.m4v"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay muted loop height="100%">
+            <source src="sim-media/intro/GraspMap.m4v"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay muted loop height="100%">
+            <source src="sim-media/intro/SkewerMap.m4v"
+                    type="video/mp4">
+          </video>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<h2 class="subtitle has-text-centered">
+</br>
+  The simulated system is based on the RAFv2 system, consisting primarily of a <b>Kinova Gen3 robot</b> attached to a powered wheelchair.<br><br>
+  <b>Three</b> different control modes are included: cartesian, single-joint, and guided controls. The system is able to detect, acquire, and deliver
+  food items. <br> The user communicates their intention to the system using their <b>head movement</b> to interact with a custom graphical interface.
+</h2>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Eating and drinking is an essential part of everyday life. And yet, many people around the world today 
+            rely on others to feed them. In the original work on the RAFv2 project, they presented a prototype robot-assisted self-feeding
+            system for individuals with movement disorders. The system was capable of perceiving, localizing, grasping, and delivering
+            food items to an individual.
+          </p>
+          <p>
+            A system such as RAFv2 requires collaboration with individuals with movement disorders to gain vast amounts of feedback on the existing capabilities. 
+            This would require demonstrations over a virtual call or a user test with a person trying out the system in-person. These methods 
+            can be difficult to show the user the capabilities of the system or costly to perform to gain that valuable feedback needed for future iterations. 
+            In this work, we present an online simulation of the RAFv2 system intended to be used to gauge user interest on the current features of the system 
+            and obtain feedback on the current state. This method would allow the user to gain a clearer picture of how the RAFv2 system would work and allow them 
+            to make informed suggestions on the project.
+          </p>
+          <p>
+            We utilized Unity3D engine to make a simulated representation of the RAFv2 system. The simulation shows the different control modes available to the user as
+            well as show how they operate. The main premise of the RAFv2 system is its ability to allow the user to choose a food object using a graphical user interface
+            and bring that object to the user for consumption. This has been implemented in the simulation using its guided control to show how robot would operate in 
+            real life if the user chose that action. There other control modes implemented are cartesian mode, where the robot moves according to an x, y, and z plane, 
+            and joint mode, where the user can control each individual joint. 
+          </p>
+          <p>
+            More information on the RAFv2 system can be seen at this <a href="index.html">link</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+  <!--/ Abstract. -->
+
+  <!-- Demonstration -->
+    <div class="columns">
+      <div class="column has-text-centered">
+        <h2 class="title is-3">Simulation</h2>
+      </div>
+    </div>
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <!--/ Demonstration -->
+
+  <!-- Unity -->
+  <div class="container is-max-desktop">
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+      <div id="unity-warning"> </div>
+      <div id="unity-footer">
+        <div id="unity-logo-title-footer"></div>
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title">RAF Simulation</div>
+      </div>
+    </div>
+    <script>
+      var canvas = document.querySelector("#unity-canvas");
+
+      // Shows a temporary message banner/ribbon for a few seconds, or
+      // a permanent error message on top of the canvas if type=='error'.
+      // If type=='warning', a yellow highlight color is used.
+      // Modify or remove this function to customize the visually presented
+      // way that non-critical warnings and error messages are presented to the
+      // user.
+      function unityShowBanner(msg, type) {
+        var warningBanner = document.querySelector("#unity-warning");
+        function updateBannerVisibility() {
+          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+        }
+        var div = document.createElement('div');
+        div.innerHTML = msg;
+        warningBanner.appendChild(div);
+        if (type == 'error') div.style = 'background: red; padding: 10px;';
+        else {
+          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+          setTimeout(function() {
+            warningBanner.removeChild(div);
+            updateBannerVisibility();
+          }, 5000);
+        }
+        updateBannerVisibility();
+      }
+
+      var buildUrl = "sim-data/Build";
+      var loaderUrl = buildUrl + "/robSim.loader.js";
+      var config = {
+        arguments: [],
+        dataUrl: buildUrl + "/robSim.data.gz",
+        frameworkUrl: buildUrl + "/robSim.framework.js.gz",
+        codeUrl: buildUrl + "/robSim.wasm.gz",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "CHMS",
+        productName: "RAF_SIMULATION",
+        productVersion: "0.1",
+        showBanner: unityShowBanner,
+      };
+
+      // By default, Unity keeps WebGL canvas render target size matched with
+      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
+      // Set this to false if you want to decouple this synchronization from
+      // happening inside the engine, and you would instead like to size up
+      // the canvas DOM size and WebGL render target sizes yourself.
+      // config.matchWebGLToCanvasSize = false;
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
+
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+        document.querySelector("#unity-container").className = "unity-mobile";
+        canvas.className = "unity-mobile";
+
+        // To lower canvas resolution on mobile devices to gain some
+        // performance, uncomment the following line:
+        // config.devicePixelRatio = 1;
+
+
+      } else {
+        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
+        canvas.style.width = "960px";
+        canvas.style.height = "600px";
+      }
+
+      document.querySelector("#unity-loading-bar").style.display = "block";
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          document.querySelector("#unity-progress-bar-full").style.width = 100 * progress + "%";
+              }).then((unityInstance) => {
+                document.querySelector("#unity-loading-bar").style.display = "none";
+                document.querySelector("#unity-fullscreen-button").onclick = () => {
+                  unityInstance.SetFullscreen(1);
+                };
+
+              }).catch((message) => {
+                alert(message);
+              });
+            };
+
+      document.body.appendChild(script);
+  
+    </script>
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <!--/ Unity -->
+
+  <!-- Controls -->
+  <div class="container is-max-desktop">
+    <div class="columns">
+      <div class="column">
+        <h2 class="title is-4">Information</h2>
+        <div class="content has-text-justified">
+          <p>
+            <b>Troubleshooting:</b>
+            <ul>
+              <li>This demo should be played in full-screen for everything to work correctly.</li>
+              <li>If you are having issues controlling, ensure to click on the application window to let it access which keys you are pressing.</li>
+              <li>If you are having issues with this player, you can also access the simulation at this <a href="https://play.unity.com/en/games/2d758d33-f2cd-4b21-bff2-e9d2ec7ea51a/chms-raf-project-demo">link</a>.</li>
+              <li>Physics issues are common with simulation. If anything breaks, press the 'Reset Scene' button on the screen or in the settings menu.</li>
+            </ul>
+            <b>Important Controls:</b>
+            <ul>
+              <li>Open the settings menu using the 'P' or 'Start Button' keys.</li>
+              <li>Change the current controller type using the 'O' or 'Right Stick' keys.</li>
+              <li>All other controls can be seen in the settings menu.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+    <br>
+  <!--/ Controls -->
+
+</section>
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-widescreen content">
+    <h2 class="title">BibTeX</h2>
+    <p>
+        If you found this work helpful, please cite our conference paper!
+    </p>
+    <pre><code>@inproceedings{schultz2022proof,
+        title={Proof-of-Concept: A Hands-Free Interface for Robot-Assisted Self-Feeding},
+        author={Schultz, John R and Slifkin, Andrew B and Yu, Hongkai and Schearer, Eric M},
+        booktitle={2022 International Conference on Rehabilitation Robotics (ICORR)},
+        pages={1--6},
+        year={2022},
+        organization={IEEE}
+      }</code></pre>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content has-text-centered">
+          <p>
+            This work is supported by NSF grant 1950558. <br>
+            Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> made by the amazing <a href="https://keunhong.com/">Keunhong Park</a>. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
