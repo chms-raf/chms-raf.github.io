@@ -20,7 +20,7 @@
       <div id="unity-footer">
         <div id="unity-logo-title-footer"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">CHMS_RAF_SIMULATION</div>
+        <div id="unity-build-title">RoboticSimulationTesting</div>
       </div>
     </div>
     <script>
@@ -55,9 +55,9 @@
       var loaderUrl = buildUrl + "/robSim.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/robSim.data.gz",
-        frameworkUrl: buildUrl + "/robSim.framework.js.gz",
-        codeUrl: buildUrl + "/robSim.wasm.gz",
+        dataUrl: buildUrl + "/robSim.data.unityweb",
+        frameworkUrl: buildUrl + "/robSim.framework.js.unityweb",
+        codeUrl: buildUrl + "/robSim.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "CHMS",
         productName: "RoboticSimulationTesting",

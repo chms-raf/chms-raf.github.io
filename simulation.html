@@ -293,7 +293,7 @@
       <div id="unity-footer">
         <div id="unity-logo-title-footer"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">RAF Simulation</div>
+        <div id="unity-build-title">RAFv2 Simulation</div>
       </div>
     </div>
     <script>
@@ -328,12 +328,12 @@
       var loaderUrl = buildUrl + "/robSim.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/robSim.data.gz",
-        frameworkUrl: buildUrl + "/robSim.framework.js.gz",
-        codeUrl: buildUrl + "/robSim.wasm.gz",
+        dataUrl: buildUrl + "/robSim.data.unityweb",
+        frameworkUrl: buildUrl + "/robSim.framework.js.unityweb",
+        codeUrl: buildUrl + "/robSim.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "CHMS",
-        productName: "RAF_SIMULATION",
+        productName: "RoboticSimulationTesting",
         productVersion: "0.1",
         showBanner: unityShowBanner,
       };
@@ -385,7 +385,7 @@
             };
 
       document.body.appendChild(script);
-  
+
     </script>
   </div>
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
